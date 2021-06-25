@@ -33,6 +33,18 @@ app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
+//Error handler for DB
+app.use((err, req, res, next) => {
+  let error = { ...err };
+  if (error.name === 'CastError') {
+    next(new AppError('Failed to casting', 404));
+  }
+  if (error.code === 11000) {
+    next(new AppError('Duplicate field', 404));
+  }
+  if (error.name === 'ValidationError')
+    next(new AppError('Validation error', 404));
+});
 //Send error to user
 app.use(sendError);
 module.exports = app;
