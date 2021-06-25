@@ -1,5 +1,6 @@
-//Formatting the error
-const AppError = require('./../utils/appError');
+//Formatting the error and send to user
+
+const AppError = require('../utils/appError');
 
 const sendError = (err, res) => {
   res.status(err.statusCode).json({
