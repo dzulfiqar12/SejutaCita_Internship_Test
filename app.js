@@ -36,7 +36,6 @@ app.all('*', (req, res, next) => {
 //Error handler if error happen in DB or JWT
 app.use((err, req, res, next) => {
   let error = { ...err };
-  console.log(err);
   if (error.name === 'CastError') {
     next(new AppError('Failed to casting', 400));
   }
