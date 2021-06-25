@@ -55,13 +55,14 @@ userSchema.pre('save', async function (next) {
 });
 
 //Schema method
+//Method for compare password from db and password from body
 userSchema.methods.correctPassword = async function (
   candidatePassword,
   userPassword
 ) {
   return await bcrypt.compare(candidatePassword, userPassword);
 };
-
+//Method to find out if user change password
 userSchema.methods.passwordChanged = function (JWTTimestamp) {
   if (this.passwordChangedAt) {
     const changedTimeStamp = parseInt(
