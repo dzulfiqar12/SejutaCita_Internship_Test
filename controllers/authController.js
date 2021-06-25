@@ -35,19 +35,19 @@ const createSendToken = (user, statusCode, res) => {
 
 //Authentication
 exports.login = catchAsync(async (req, res, next) => {
-  const email = req.body.email;
+  const username = req.body.username;
   const password = req.body.password;
 
-  //Check if email and password exist
-  if (!email || !password) {
-    return next(new AppError('Please provide email and password', 400));
+  //Check if username and password exist
+  if (!username || !password) {
+    return next(new AppError('Please provide username and password', 400));
   }
   //Check if user exist & password is correct
-  const user = await User.findOne({ email: email }).select('+password');
+  const user = await User.findOne({ username }).select('+password');
   const correct = await user.correctPassword(password, user.password);
 
   if (!user || !correct) {
-    return next(new AppError('Incorrect email or password', 401));
+    return next(new AppError('Incorrect username or password', 401));
   }
 
   //If everything ok,send token to client
