@@ -62,7 +62,7 @@ userSchema.methods.correctPassword = async function (
 ) {
   return await bcrypt.compare(candidatePassword, userPassword);
 };
-//Method to find out if user change password
+//Method to check user changed password
 userSchema.methods.passwordChanged = function (JWTTimestamp) {
   if (this.passwordChangedAt) {
     const changedTimeStamp = parseInt(
