@@ -24,5 +24,5 @@ mongoose
 
 //Setting listener for app
 app.listen(port, () => {
-  console.log(`App running in port ${port} d...`);
+  console.log(`App running in port ${port} ...`);
 });
