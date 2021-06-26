@@ -55,7 +55,7 @@ exports.login = catchAsync(async (req, res, next) => {
 
 //JWT validators
 exports.protect = catchAsync(async (req, res, next) => {
-  //Check token and get it from headers
+  //Check token and get it from cookies
   let token;
 
   if (req.cookies.jwt) {
