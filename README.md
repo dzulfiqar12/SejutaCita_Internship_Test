@@ -1,5 +1,8 @@
 # Sejuta Cita Internship Test
 Repo ini dibuat untuk tujuan test internship sejuta cita
+
+## Chart
+![Chart](./readmeImage/sejutacita.png)
 ## Instalasi
 Untuk melakukan instalasi dari app ini dapat melakukan langkah langkah sebagai berikut :
 
@@ -99,3 +102,9 @@ minikube stop
 | Username  | Password |
 |:---------:|:--------:|
 |   admin   | udin1234 |
+
+## Bukti Deployment Berhasil
+
+### Docker
+![Doker1](./readmeImage/sejutacita.png)
+### Kubernetes
