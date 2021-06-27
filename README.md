@@ -102,3 +102,9 @@ minikube stop
 | Username  | Password |
 |:---------:|:--------:|
 |   admin   | udin1234 |
+
+## Bukti Deployment Berhasil
+
+# Docker
+![Doker1](./readmeImage/sejutacita.png)
+# Kubernetes
