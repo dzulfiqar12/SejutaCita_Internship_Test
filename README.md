@@ -96,6 +96,6 @@ minikube stop
 
 ## Credential Admin
 
-| Username |   admin  |
-|:--------:|:--------:|
-| Password | udin1234 |
+| Username : |   admin  |
+|:----------:|:--------:|
+| Password : | udin1234 |
