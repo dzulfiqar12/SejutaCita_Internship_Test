@@ -13,6 +13,19 @@ npm install
 ```
 
 3. Buat suatu file .env yang berisi :
+|       Variable      |            Value           |
+|:-------------------:|:--------------------------:|
+|       NODE_ENV      |         development        |
+|         PORT        |            3000            |
+|       DATABASE      |   `Berisi link database`   |
+|  DATABASE_PASSWORD  | `Berisi password database` |
+|      JWT_SECRET     |       `Random string`      |
+|    JWT_EXPIRES_IN   |             90d            |
+| JWT_COOKIES_EXPIRES | 90                         |
+4. Jalankan aplikasi :
+```bash
+npm start
+```
 
 
 ## Dokumentasi
