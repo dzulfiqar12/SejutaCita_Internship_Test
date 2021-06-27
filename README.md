@@ -105,6 +105,6 @@ minikube stop
 
 ## Bukti Deployment Berhasil
 
-# Docker
+### Docker
 ![Doker1](./readmeImage/sejutacita.png)
-# Kubernetes
+### Kubernetes
