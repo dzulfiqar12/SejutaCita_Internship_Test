@@ -1,5 +1,5 @@
 //Formatting the error and send to user
-const AppError = require('./../utils/appError');
+require('../utils/appError');
 
 const sendError = (err, res) => {
   if (err.statusCode === undefined) {

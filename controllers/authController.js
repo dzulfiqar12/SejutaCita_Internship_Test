@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
-const User = require('./../models/userModel');
-const catchAsync = require('./../utils/catchAsync');
-const AppError = require('./../utils/appError');
+const User = require('../models/userModel');
+const catchAsync = require('../utils/catchAsync');
+const AppError = require('../utils/appError');
 
 //Made a token
 const signToken = (id) =>
@@ -35,8 +35,7 @@ const createSendToken = (user, statusCode, res) => {
 
 //Authentication
 exports.login = catchAsync(async (req, res, next) => {
-  const username = req.body.username;
-  const password = req.body.password;
+  const { username, password } = req.body;
 
   //Check if username and password exist
   if (!username || !password) {
@@ -50,7 +49,7 @@ exports.login = catchAsync(async (req, res, next) => {
   }
 
   //If everything ok,send token to client
-  const token = createSendToken(user._id, 200, res);
+  createSendToken(user._id, 200, res);
 });
 
 //JWT validators
@@ -83,11 +82,11 @@ exports.protect = catchAsync(async (req, res, next) => {
   next();
 });
 //Authorization
-exports.restrictTo = (...roles) => {
-  return (req, res, next) => {
+exports.restrictTo =
+  (...roles) =>
+  (req, res, next) => {
     if (!roles.includes(req.user.role)) {
       return next(new AppError('You dont have a permission', 401));
     }
     next();
   };
-};

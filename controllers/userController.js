@@ -1,6 +1,6 @@
 //Routes handler
-const User = require('./../models/userModel');
-const catchAsync = require('./../utils/catchAsync');
+const User = require('../models/userModel');
+const catchAsync = require('../utils/catchAsync');
 
 //Create for admin
 exports.createUser = catchAsync(async (req, res, next) => {
@@ -53,7 +53,7 @@ exports.updateUser = catchAsync(async (req, res, next) => {
 
 //Delete for admin
 exports.deleteUser = catchAsync(async (req, res, next) => {
-  const user = await User.findByIdAndDelete(req.params.id);
+  await User.findByIdAndDelete(req.params.id);
   res.status(204).json({
     status: 'success',
     data: null,

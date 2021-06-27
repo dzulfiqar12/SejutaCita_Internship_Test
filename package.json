@@ -30,7 +30,8 @@
   },
   "scripts": {
     "start:dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "npx eslint ."
   },
   "author": "dzulfiqar",
   "license": "ISC"
