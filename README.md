@@ -13,6 +13,7 @@ npm install
 ```
 
 3. Buat suatu file .env yang berisi :
+
 |       Variable      |            Value           |
 |:-------------------:|:--------------------------:|
 |       NODE_ENV      |         development        |
