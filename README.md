@@ -108,14 +108,17 @@ minikube stop
 ### Docker
 
 1. Build image dan menjalankan docker
+
 ![Docker1](./readmeImage/Docker1.jpg)
 
 2. Push docker ke docker hub
+
 ![Docker2](./readmeImage/Docker2.jpg)
 
 ### Kubernetes
 
 1. Menjalankan minikube
+
 ![Kubernetes1](./readmeImage/Kubernetes1.jpg)
 
 2. Setting kubernetes mulai dari .env,menjalankan file yml,dan melihat pods yang berjalan.
@@ -123,9 +126,11 @@ minikube stop
 ![Kubernetes2](./readmeImage/Kubernetes2.jpg)
 
 3. Melihat url yang nantinya akan digunakan untuk mengakses API.
+
 ![Kubernetes3](./readmeImage/Kubernetes3.jpg)
 
 4. Melakukan request menggunakan url yang sudah didapatkan sebelumnya
+
 ![Kubernetes4](./readmeImage/Kubernetes4.jpg)
 
 
